@@ -19,8 +19,9 @@
 
 ## Границы
 
-- `frontend/` — страницы и вызовы API.
-- `backend/` — HTTP API и миграции.
+- `frontend/` — страницы и вызовы API. Сейчас: `/login` и главная-заглушка.
+- `backend/` — HTTP API и миграции. Сейчас: `POST /auth/login`, `POST /auth/logout`, `GET /auth/me`.
+- Сессия — подписанная httpOnly cookie `session` с `id` пользователя. Это не JWT. Браузер ходит на backend (`http://localhost:3001`) с `credentials: include`.
 - `docs/` — архитектура, схема, ADR, заметки к RAG.
 - RAG и pgvector в запросах — этап 2. Образ Postgres уже с pgvector, чтобы не менять стенд позже.
 

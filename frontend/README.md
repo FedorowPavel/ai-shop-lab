@@ -1,5 +1,12 @@
 # Frontend
 
-Next.js (App Router) появится в первой подтверждённой задаче с UI. Страницы держим простыми: цель лаборатории — процесс, не дизайн.
+Next.js (App Router). Страницы простые: `/login` и главная.
 
-Проверки, когда пакет появится: `npm test` и `npm run typecheck`.
+```bash
+npm install
+npm run dev
+```
+
+Backend ожидается на `http://localhost:3001` (`NEXT_PUBLIC_API_URL` в `.env.example`).
+
+Проверки: `npm test` и `npm run typecheck`.
