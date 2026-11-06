@@ -5,7 +5,7 @@
 ## Цикл
 
 1. «создай задачу 001-login» — файл в `tasks/`, без кода.
-2. «создай issue» — GitHub issue через `gh issue create`.
+2. «создай issue» — создать GitHub issue из файла задачи через подключённый GitHub MCP, инструмент `issue_write` (method `create`, owner `FedorowPavel`, repo `ai-shop-lab`). Не использовать `gh issue create`.
 3. «подтверждаю» — ветка `feature/task-001` от `master`, реализация, тесты, typecheck, push, PR в `master`.
 
 Правило сессии: `.cursor/rules/workflow.mdc`. Навыки: `implement-task`, `review-code`, `deploy-check`, `update-docs`.
