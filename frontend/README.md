@@ -7,6 +7,6 @@ npm install
 npm run dev
 ```
 
-Backend ожидается на `http://localhost:3001` (`NEXT_PUBLIC_API_URL` в `.env.example`).
+Страница вызывает `/api/...`. Next.js пересылает это на backend `http://localhost:3001` (`API_URL`).
 
 Проверки: `npm test` и `npm run typecheck`.

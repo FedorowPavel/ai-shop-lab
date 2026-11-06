@@ -18,12 +18,18 @@ export default function LoginPage() {
       return;
     }
 
-    const response = await fetch(apiUrl('/auth/login'), {
-      method: 'POST',
-      credentials: 'include',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ login, password }),
-    });
+    let response: Response;
+    try {
+      response = await fetch(apiUrl('/auth/login'), {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ login, password }),
+      });
+    } catch {
+      setError('Не удалось связаться с сервером');
+      return;
+    }
 
     if (!response.ok) {
       const body = (await response.json().catch(() => null)) as { message?: string } | null;
